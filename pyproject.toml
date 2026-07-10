@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "macrofactor-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Unofficial local fueling and recovery decision engine; not affiliated with MacroFactor or Stronger By Science; not medical advice"
 readme = "README.md"
 license = "MIT"

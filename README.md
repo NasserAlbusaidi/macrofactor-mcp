@@ -126,3 +126,5 @@ supported by MacroFactor or Stronger By Science. It is not medical advice and
 must not replace care from a qualified health professional.
 
 Released under the [MIT License](LICENSE).
+
+mcp-name: io.github.NasserAlbusaidi/macrofactor-mcp
