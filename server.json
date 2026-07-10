@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.NasserAlbusaidi/macrofactor-mcp",
+  "description": "Fueling & recovery decision engine combining MacroFactor nutrition with Garmin training data",
+  "repository": {
+    "url": "https://github.com/NasserAlbusaidi/macrofactor-mcp",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "macrofactor-mcp",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "Path to the local DuckDB database (default: ~/.macrofactor/macrofactor.duckdb)",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false,
+          "name": "MACROFACTOR_DB_PATH"
+        },
+        {
+          "description": "Directory watched for MacroFactor export files to auto-import (default: ~/Downloads)",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false,
+          "name": "MACROFACTOR_DATA_DIR"
+        },
+        {
+          "description": "Directory holding Garmin Connect auth tokens for optional Garmin sync (default: ~/.garminconnect)",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false,
+          "name": "GARMINTOKENS"
+        }
+      ]
+    }
+  ]
+}
