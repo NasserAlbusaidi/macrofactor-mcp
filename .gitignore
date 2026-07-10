@@ -1,0 +1,60 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# macOS
+.DS_Store
+
+# DuckDB
+*.duckdb
+*.duckdb.*
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# Exports (user data)
+exports/
+*.xlsx
+
+# Credentials and local sessions
+.env
+.env.*
+!.env.example
+.garminconnect/
+garmin_tokens/
+tokens/
+*.session
+credentials*.json
+secrets*.json
+*.pem
+*.key
+
+# Private/local automation and generated outputs
+launchd/
+*.plist
+dashboard/
+sync/
+scripts/*
+tools/dashboard_sync.py
+.wrangler/
+wrangler.toml
+insights.md
+
+# Release audit stays local
+AUDIT.md
+
+# Claude-related files
+CLAUDE.md
+journal.md
+
+# Local docs are excluded unless explicitly vetted for publication
+docs/*
+!docs/positioning.md

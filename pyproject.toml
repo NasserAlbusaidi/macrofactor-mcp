@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "macrofactor-mcp"
+version = "0.1.0"
+description = "Unofficial local fueling and recovery decision engine; not affiliated with MacroFactor or Stronger By Science; not medical advice"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.26.0,<2",
+    "openpyxl>=3.1.0",
+    "duckdb>=1.0.0",
+    "garminconnect>=0.2.38",
+    "garth>=0.5.17,<0.6.0",
+]
+
+[project.scripts]
+macrofactor-mcp = "main:main"
+
+[tool.hatch.build]
+exclude = [
+    "/tools/dashboard_sync.py",
+]
+
+[tool.hatch.build.targets.wheel]
+only-include = [
+    "main.py",
+    "schemas.py",
+    "importers.py",
+    "garmin_sync.py",
+    "lib",
+    "tools",
+]
+
+[tool.hatch.build.targets.sdist]
+only-include = [
+    "main.py",
+    "schemas.py",
+    "importers.py",
+    "garmin_sync.py",
+    "lib",
+    "tools",
+    "README.md",
+    "LICENSE",
+    "pyproject.toml",
+    "uv.lock",
+    "docs/positioning.md",
+]
